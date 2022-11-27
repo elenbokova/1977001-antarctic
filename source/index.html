@@ -35,42 +35,43 @@
     <header class="header container" data-id="header" data-js="true">
       <div class="header__container" data-nav="is-shown">
         <div class="header__navigation-wrapper">
-        <a class="header__logo">
-          <svg width="70" height="38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-logo"></use>
-          </svg>
-        </a>
-        <button class="header__nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="header-nav">
-          <span class="visually-hidden">Открыть меню</span>
-          <svg class="header__toggle-icon" aria-hidden="true" width="24" height="14">
-            <use class="header__toggle-burger" href="img/sprite.svg#icon-burger"></use>
-            <use class="header__toggle-close" href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <nav class="header__nav" id="header-nav">
-          <ul class="header__nav-list nav-list">
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">
-                Преимущества
-              </a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">
-                Направления
-              </a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">
-                Ближайшие круизы
-              </a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">
-                Контакты
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <a class="header__logo">
+            <svg width="70" height="38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-logo"></use>
+            </svg>
+          </a>
+          <button class="header__nav-toggle" type="button" data-nav-toggle aria-expanded="false"
+            aria-controls="header-nav">
+            <span class="visually-hidden">Открыть меню</span>
+            <svg class="header__toggle-icon" aria-hidden="true" width="24" height="14">
+              <use class="header__toggle-burger" href="img/sprite.svg#icon-burger"></use>
+              <use class="header__toggle-close" href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="header__nav" id="header-nav">
+            <ul class="header__nav-list nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">
+                  Преимущества
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">
+                  Направления
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">
+                  Ближайшие круизы
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
 
         </div>
 
@@ -83,12 +84,19 @@
           <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
         </div>
       </section>
-      <section class="promo">
-        <div class="container">
-          <h2>Путешествие на&nbsp;край Земли</h2>
-          <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш
-            круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько
-            видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+      <section class="promo container">
+        <div>
+          <div>
+            <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш
+              круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько
+              видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+          </div>
+          <picture>
+            <source srcset="img/promo.webp 1x, img/promo@2x.webp 2x" type="image/webp">
+            <img src="img/promo.jpg" srcset="img/promo@2x.jpg 2x" alt="Три пингвина на ледяном склоне" width="560"
+              height="301">
+          </picture>
         </div>
       </section>
       <section class="benefits">
