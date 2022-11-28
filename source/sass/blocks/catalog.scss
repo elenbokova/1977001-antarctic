@@ -1,0 +1,172 @@
+.catalog {
+  padding: 95px 0 120px;
+
+  @include vp-1023 {
+    padding-top: 89px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 58px;
+    padding-bottom: 65px;
+  }
+}
+
+.catalog h2 {
+  margin-top: 0;
+  margin-bottom: 57px;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+
+  @include vp-1023 {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+
+.catalog ul {
+  margin: 0 15px;
+  padding: 0;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 386px;
+  gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include vp-767 {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0 9px;
+  }
+}
+
+.catalog li {
+  position: relative;
+  padding: 30px;
+  padding-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $color-default-black;
+  background-image: $black-180deg;
+  color: $color-default-white;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: $black-180deg;
+  }
+
+
+  @include vp-1023 {
+    padding: 35px;
+    padding-bottom: 28px;
+  }
+
+  @include vp-767 {
+    padding-left: 26px;
+    padding-bottom: 17px;
+  }
+}
+
+.catalog img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.catalog li:hover {
+  overflow-y: scroll;
+  justify-content: inherit;
+  padding: 30px 25px 36px;
+
+  &::after {
+    display: none;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+  }
+
+  img {
+    display: none;
+  }
+
+  div {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+  }
+
+  @include vp-1023 {
+    padding: 28px 35px 35px;
+  }
+
+  @include vp-767 {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+.catalog h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  z-index: 1;
+}
+
+.catalog li div {
+  display: none;
+  height: 100%;
+}
+
+.catalog dt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.catalog dd {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.catalog a {
+  display: inline-block;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  word-break: break-word;
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 9px;
+  }
+}
