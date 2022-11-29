@@ -106,7 +106,7 @@
     width: calc(100% - 15px);
 
     .header__navigation-wrapper {
-      width: calc(100% - 16px);
+      width: calc(100% - 14px);
     }
 
     .header__nav {
@@ -166,16 +166,22 @@
     margin-bottom: 7px;
     border-radius: 10px;
   }
-
-  &:hover {
-    background-color: $color-maya-blue-transparent;
-  }
 }
 
 .header__nav-link {
   font-weight: 500;
   line-height: 20px;
   color: $color-default-white;
+
+  @include focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+  }
+
+  @include hover-focus {
+    color: $color-turbo;
+    transition: color $trans-default;
+  }
 
   @include vp-1023 {
     font-size: 14px;
@@ -186,6 +192,15 @@
     color: $color-default-black;
     font-size: 18px;
     line-height: 22px;
+
+    @include hover-focus {
+      color: $color-default-black;
+    }
+
+    @include focus {
+      outline: 1px solid $color-default-black;
+      outline-offset: 2px;
+    }
   }
 }
 
@@ -196,16 +211,20 @@
   padding: 0;
   background-color: $color-transparent;
   border: none;
-  border-radius: 50%;
+  border-radius: 20%;
   color: $color-default-white;
-
 
   @include vp-767 {
     justify-content: center;
     cursor: pointer;
 
-    &:hover {
+    @include hover-focus {
       background-color: $color-maya-blue-transparent;
+      transition: background-color $trans-default;
+    }
+
+    @include focus {
+      outline: 1px solid $color-default-black;
     }
   }
 }

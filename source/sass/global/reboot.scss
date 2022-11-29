@@ -18,6 +18,7 @@ html {
   line-height: 24px;
   font-family: $ff-main;
   color: $color-default-black;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,6 +67,11 @@ input:-webkit-autofill {
 input,
 textarea {
   border-radius: 0;
+
+  @include focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+  }
 
   &::placeholder {
     opacity: 1;

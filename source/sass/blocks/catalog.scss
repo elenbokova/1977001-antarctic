@@ -26,7 +26,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 35px;
   }
@@ -84,6 +84,40 @@
     padding-left: 26px;
     padding-bottom: 17px;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    overflow-y: scroll;
+    justify-content: inherit;
+    padding: 30px 25px 36px;
+
+    &::after {
+      display: none;
+    }
+
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    img {
+      display: none;
+    }
+
+    div {
+      display: grid;
+      grid-template-rows: 1fr min-content;
+    }
+
+    @include vp-1023 {
+      padding: 28px 35px 35px;
+    }
+
+    @include vp-767 {
+      padding-left: 27px;
+      padding-right: 27px;
+    }
+  }
 }
 
 .catalog img {
@@ -94,38 +128,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.catalog li:hover {
-  overflow-y: scroll;
-  justify-content: inherit;
-  padding: 30px 25px 36px;
-
-  &::after {
-    display: none;
-  }
-
-  h3 {
-    margin-bottom: 15px;
-  }
-
-  img {
-    display: none;
-  }
-
-  div {
-    display: grid;
-    grid-template-rows: 1fr min-content;
-  }
-
-  @include vp-1023 {
-    padding: 28px 35px 35px;
-  }
-
-  @include vp-767 {
-    padding-left: 27px;
-    padding-right: 27px;
-  }
 }
 
 .catalog h3 {
@@ -156,6 +158,7 @@
 
 .catalog a {
   display: inline-block;
+  vertical-align: auto;
   text-align: center;
   margin-top: auto;
   width: 100%;
@@ -168,5 +171,15 @@
 
   @include vp-1023 {
     padding: 9px;
+  }
+
+  @include hover-focus {
+    background-color: $color-turbo;
+    transition: background-color $trans-default;
+  }
+
+  @include focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
   }
 }

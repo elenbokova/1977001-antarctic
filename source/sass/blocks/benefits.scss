@@ -2,16 +2,15 @@
   padding: 120px 0;
   background-color: $color-maya-blue-transparent;
   background-image: linear-gradient($color-solitude-transparent),
-    -webkit-image-set(url("../img/background/bg-benefits@2x.jpg") 2x,
-      url("../img/background/bg-benefits.jpg") 1x);
-  background-image: linear-gradient($color-solitude-transparent),
-    image-set(url("../img/background/bg-benefits@2x.webp") type("image/webp") 2x,
-      url("../img/background/bg-benefits.webp") type("image/webp") 1x,
-      url("../img/background/bg-benefits@2x.jpg") 2x,
-      url("../img/background/bg-benefits.jpg") 1x);
+    url("../img/background/bg-benefits.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 25%;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: linear-gradient($color-solitude-transparent),
+      url("../img/background/bg-benefits@2x.jpg");
+  }
 
   @include vp-1023 {
     padding-top: 89px;
@@ -94,7 +93,6 @@
   line-height: 27px;
 
   @include vp-1023 {
-    //margin-bottom: 6px;
     line-height: 25px;
   }
 }
