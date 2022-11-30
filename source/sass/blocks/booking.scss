@@ -2,9 +2,9 @@
   padding: 50px 60px;
   background-color: $color-maya-blue-transparent;
   background-image: url("../img/background/bg-booking.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 25%;
+  background-position: 50% 6%;
+  background-size: calc(100% + 60px);
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/background/bg-booking@2x.jpg");

@@ -1039,9 +1039,9 @@ button,
   padding: 50px 60px;
   background-color: rgba(229, 238, 247, 0.5);
   background-image: url("../img/background/bg-booking.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 25%;
+  background-position: 50% 6%;
+  background-size: calc(100% + 60px);
 }
 
 .booking > div {
