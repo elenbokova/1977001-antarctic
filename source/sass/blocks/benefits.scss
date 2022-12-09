@@ -50,15 +50,14 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
+  gap: 40px;
 
   @include vp-1023 {
-    column-gap: 30px;
+    gap: 30px;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    row-gap: 30px;
   }
 }
 

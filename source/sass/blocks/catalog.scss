@@ -3,7 +3,7 @@
 
   @include vp-1023 {
     padding-top: 89px;
-    padding-bottom: 100px;
+    padding-bottom: 98px;
   }
 
   @include vp-767 {
@@ -14,7 +14,7 @@
 
 .catalog h2 {
   margin-top: 0;
-  margin-bottom: 57px;
+  margin-bottom: 59px;
   font-weight: 600;
   font-size: 28px;
   text-align: center;
@@ -39,7 +39,6 @@
 
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-rows: 386px;
   gap: 30px;
 
   @include vp-1023 {
@@ -62,6 +61,7 @@
   background-color: $color-default-black;
   background-image: $black-180deg;
   color: $color-default-white;
+  aspect-ratio: 2.02 / 3;
   cursor: pointer;
 
   &::after {
@@ -74,21 +74,22 @@
     background-image: $black-180deg;
   }
 
-
   @include vp-1023 {
     padding: 35px;
     padding-bottom: 28px;
+    aspect-ratio: 2.4 / 3;
   }
 
   @include vp-767 {
     padding-left: 26px;
     padding-bottom: 17px;
+    aspect-ratio: 2.12 / 3;
   }
 
   &:hover,
   &:focus,
   &:focus-within {
-    overflow-y: scroll;
+    overflow-y: auto;
     justify-content: inherit;
     padding: 30px 25px 36px;
 
@@ -97,7 +98,7 @@
     }
 
     h3 {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     img {
@@ -162,7 +163,7 @@
   text-align: center;
   margin-top: auto;
   width: 100%;
-  padding: 8px 10px;
+  padding: 10px 8px 10px;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;

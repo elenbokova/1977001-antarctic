@@ -83,7 +83,7 @@
 }
 
 .booking form {
-  max-width: 403px;
+  width: 403px;
   margin-right: 60px;
   padding: 45px 50px 51px;
   background-color: $color-default-black;
@@ -95,7 +95,8 @@
   }
 
   @include vp-767 {
-    padding: 33px 30px 43px;
+    width: 100%;
+    padding: 34px 30px 41px;
   }
 }
 
@@ -111,6 +112,7 @@
   }
 
   @include vp-767 {
+    margin-bottom: 29px;
     text-align: center;
     line-height: 25px;
   }

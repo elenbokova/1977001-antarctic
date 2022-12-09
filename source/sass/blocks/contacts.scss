@@ -24,6 +24,7 @@
   @include vp-767 {
     display: flex;
     flex-direction: column-reverse;
+    align-items: stretch;
     gap: 30px;
   }
 }
@@ -77,12 +78,17 @@
       top: 5px;
     }
   }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
 }
 
 .contacts a {
   position: relative;
   padding-left: 29px;
   line-height: 24px;
+  display: block;
 
   &::before {
     content: "";
